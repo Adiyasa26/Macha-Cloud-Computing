@@ -11,3 +11,8 @@ Macha ( Mental Health Chat App) is an application that help people to control ab
 4. Cloud Firestore
 5. API Gateway
 6. Docker
+
+## APIs Documentation
+1. /chatbot
+2. /users
+3. /users/login
