@@ -1,0 +1,54 @@
+# openapi-definition.yaml
+swagger: "2.0"
+info:
+  title: backendmacha
+  description: Serverless APIs with API Gateway
+  version: 1.0.0
+schemes:
+ - https
+produces:
+ - application/json
+paths:
+  /users/login:
+      post:
+        summary: Post an user login
+        operationId: getUserLogin
+        x-google-backend:
+          address: https://vocal-seeker-315004.et.r.appspot.com/users/login
+        responses:
+          '200':
+            description: Login Success
+            schema:
+              type: string
+  /users:
+      post:
+        summary: Post an regist user
+        operationId: add_user
+        x-google-backend:
+          address: https://vocal-seeker-315004.et.r.appspot.com/users
+        responses:
+          '200':
+            description: A successful add user
+            schema:
+              type: string
+  /chatbot:
+      post:
+        summary: Post an chatbot
+        operationId: chatbot
+        x-google-backend:
+          address: https://macha-chatbot-api-alxi2g6agq-et.a.run.app/chatbot
+        responses:
+          '200':
+            description: A successful response
+            schema:
+              type: string
+      get:
+        summary: Get an chatbot
+        operationId: hello
+        x-google-backend:
+          address: https://macha-chatbot-api-alxi2g6agq-et.a.run.app/chatbot
+        responses:
+          '200':
+            description: A successful response
+            schema:
+              type: string
